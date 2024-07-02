@@ -1,0 +1,303 @@
+﻿lscpu->get core values of system and all other details about archetecture
+
+PWD:present working directory
+
+kpit@L-18990:~$ pwd
+/home/kpit
+
+find ~path -iname "SmartDevice.cpp"-->will find the sd folder and i will ignore case
+cp ~r path ->copy the folder into current folder(specifing to copy recursively -r)
+
+example:cp -r /home/kpit/Downloads/Training_Files/Aggregation  /home/kpit/Downloads/Modern_CPP/Week2/Lamda_Functions/
+
+
+touch ~/Documents/TimeManagement.odt //go to specific file or folder
+
+Two ways to write path:
+1)Absaluete path - always starts with \ in linux / in windows
+2)Relative path  - assume that current location is known to compiler so give only the remaining path
+
+
+->ls to see whats inside the file
+
+we can also create variables in terminal like create a variable "source=/folderpath/ now use these where ever in command this path is required 
+
+***To continue your command in the next line give "\" then enter and then continue the command as nothing happend...******
+
+
+kpit@L-18990:~$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+to go to previous level or higher level directory:
+
+kpit@L-18990:~/Downloads/Modern_CPP$ cd /home/kpit/Downloads/Modern_CPP/
+kpit@L-18990:~/Downloads/Modern_CPP$ cd      ..
+kpit@L-18990:~/Downloads$ cd    .
+kpit@L-18990:~/Downloads$ cd /bin
+kpit@L-18990:/bin$ 
+
+cd - (for back and forth):
+
+kpit@L-18990:~/Downloads/Modern_CPP$ cd /home/kpit/Downloads/Modern_CPP/
+kpit@L-18990:~/Downloads/Modern_CPP$ cd      ..
+kpit@L-18990:~/Downloads$ cd    .
+kpit@L-18990:~/Downloads$ cd /bin
+kpit@L-18990:/bin$ 
+
+
+ctrl+fn+alt+f3 to switch UI and work through terminal completely
+
+
+Command to open note pad in terminal:(to exit use ctrl+x)
+kpit@L-18990:~/Downloads$ nano Modern_CPP/Week2/Lamda_Functions/example3.cpp
+
+
+Command to install git:
+sudo apt install git
+
+to know current version:
+git –version
+
+To give user and email:
+
+git config --global user.name "Chennoju Sathvika"
+
+git config --global user.email "chennoju.sathvika@kpit.com"
+
+
+Better to be at mainbranch:
+
+git config --global init.defaultBranch main
+
+pwd pathoffolder
+
+pwd /home/kpit/Downloads/Modern_CPP
+
+git init .//goes to current folder cretes local repo
+
+(localrepo->stating area->local commit->remote repo)
+
+localrepo is a workspace(init command gives the local ws)
+local commit hapens in local repo backup
+
+local repository bckup------------>remotewoekspace
+				    push
+local work space <------------------remotewoekspace
+				     pull
+
+if no local work space and we doing first time use “git clone”
+*git takes back up of things which are only in staging area
+
+
+Raising a pr or pull request to merge ur code with main code
+
+git add .(entire files are added to staging area from current folder)
+
+
+to check current status of git:git status
+
+
+kpit@L-18990:~/Downloads/Modern_CPP$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .vscode/settings.json
+        new file:   .~lock.GIT_NOTES.txt#
+        new file:   18..june..training..session/Example2/Vehicle.cpp
+        new file:   18..june..training..session/Example3.cpp
+        new file:   18..june..training..session/Example4.cpp
+        new file:   18..june..training..session/Examples/Department.h
+        new file:   18..june..training..session/Examples/EnumExampleProblem.cpp
+        new file:   18..june..training..session/Examples/EnumExampleSolution.cpp
+        new file:   18..june..training..session/Examples/Example1.cpp
+        new file:   18..june..training..session/Sample_Section/Engine.cpp
+        new file:   18..june..training..session/Sample_Section/Engine.h
+        new file:   18..june..training..session/Sample_Section/IdNotFounException.h
+        new file:   18..june..training..session/Sample_Section/Main.cpp
+        new file:   18..june..training..session/Sample_Section/app
+        new file:   18..june..training..session/Sample_Section/functionalities.cpp
+        new file:   18..june..training..session/Sample_Section/functionalities.h
+        new file:   18..june..training..session/Sample_Section/input.txt
+        new file:   18..june..training..session/Sample_Section/notes.txt
+        new file:   18..june..training..session/notes.txt
+        new file:   19--june/.vscode/launch.json
+        new file:   19--june/.vscode/settings.json
+        new file:   19--june/Constructors/Constructor_Delegation.cpp
+        new file:   19--june/Constructors/additionaldt.cpp
+        new file:   19--june/DataStructures.txt
+        new file:   19--june/Sample_Section/.vscode/launch.json
+        new file:   19--june/Sample_Section/.vscode/settings.json
+        new file:   19--june/Sample_Section/Engine.cpp
+        new file:   19--june/Sample_Section/Engine.h
+        new file:   19--june/Sample_Section/IdNotFounException.h
+        new file:   19--june/Sample_Section/Main.cpp
+        new file:   19--june/Sample_Section/NoValidEngineFoundException.h
+        new file:   19--june/Sample_Section/a.out
+        new file:   19--june/Sample_Section/app
+        new file:   19--june/Sample_Section/functionalities.cpp
+        new file:   19--june/Sample_Section/functionalities.h
+        new file:   19--june/Sample_Section/input.txt
+        new file:   19--june/Sample_Section/notes.txt
+        new file:   19--june/Vector.cpp
+        new file:   19--june/app
+        new file:   GIT_NOTES.txt
+        new file:   RAII/RAII_Example1.cpp
+        new file:   RAII/app
+        new file:   Week2/app
+        new file:   Week2/example1.cpp
+        new file:   Week2/example2.cpp
+        new file:   Week2/example3.cpp
+        new file:   Week2/example4.cpp
+        new file:   Week2/example5.cpp
+        new file:   Week2/notes.txt
+        new file:   Week2/sample.cpp
+
+
+
+To commit the work done:
+git commit -m "code upto tuesday evening"
+
+kpit@L-18990:~/Downloads/Modern_CPP$ git commit -m "code upto tuesday evening"
+[master (root-commit) 6ce10ca] code upto tuesday evening
+ 50 files changed, 1519 insertions(+)
+ create mode 100644 .vscode/settings.json
+ create mode 100644 .~lock.GIT_NOTES.txt#
+ create mode 100644 18..june..training..session/Example2/Vehicle.cpp
+ create mode 100644 18..june..training..session/Example3.cpp
+ create mode 100644 18..june..training..session/Example4.cpp
+ create mode 100644 18..june..training..session/Examples/Department.h
+ create mode 100644 18..june..training..session/Examples/EnumExampleProblem.cpp
+ create mode 100644 18..june..training..session/Examples/EnumExampleSolution.cpp
+ create mode 100644 18..june..training..session/Examples/Example1.cpp
+ create mode 100644 18..june..training..session/Sample_Section/Engine.cpp
+ create mode 100644 18..june..training..session/Sample_Section/Engine.h
+ create mode 100644 18..june..training..session/Sample_Section/IdNotFounException.h
+ create mode 100644 18..june..training..session/Sample_Section/Main.cpp
+ create mode 100755 18..june..training..session/Sample_Section/app
+ create mode 100644 18..june..training..session/Sample_Section/functionalities.cpp
+ create mode 100644 18..june..training..session/Sample_Section/functionalities.h
+ create mode 100644 18..june..training..session/Sample_Section/input.txt
+ create mode 100644 18..june..training..session/Sample_Section/notes.txt
+ create mode 100644 18..june..training..session/notes.txt
+ create mode 100644 19--june/.vscode/launch.json
+ create mode 100644 19--june/.vscode/settings.json
+ create mode 100644 19--june/Constructors/Constructor_Delegation.cpp
+ create mode 100644 19--june/Constructors/additionaldt.cpp
+ create mode 100644 19--june/DataStructures.txt
+ create mode 100644 19--june/Sample_Section/.vscode/launch.json
+ create mode 100644 19--june/Sample_Section/.vscode/settings.json
+ create mode 100644 19--june/Sample_Section/Engine.cpp
+ create mode 100644 19--june/Sample_Section/Engine.h
+ create mode 100644 19--june/Sample_Section/IdNotFounException.h
+ create mode 100644 19--june/Sample_Section/Main.cpp
+ create mode 100644 19--june/Sample_Section/NoValidEngineFoundException.h
+ create mode 100755 19--june/Sample_Section/a.out
+ create mode 100755 19--june/Sample_Section/app
+ create mode 100644 19--june/Sample_Section/functionalities.cpp
+ create mode 100644 19--june/Sample_Section/functionalities.h
+ create mode 100644 19--june/Sample_Section/input.txt
+ create mode 100644 19--june/Sample_Section/notes.txt
+ create mode 100644 19--june/Vector.cpp
+ create mode 100755 19--june/app
+ create mode 100644 GIT_NOTES.txt
+ create mode 100644 RAII/RAII_Example1.cpp
+ create mode 100755 RAII/app
+ create mode 100755 Week2/app
+ create mode 100644 Week2/example1.cpp
+ create mode 100644 Week2/example2.cpp
+ create mode 100644 Week2/example3.cpp
+ create mode 100644 Week2/example4.cpp
+ create mode 100644 Week2/example5.cpp
+ create mode 100644 Week2/notes.txt
+ create mode 100644 Week2/sample.cpp
+
+
+
+kpit@L-18990:~/Downloads/Modern_CPP$ git status
+On branch master
+nothing to commit, working tree clean
+kpit@L-18990:~/Downloads/Modern_CPP$ git log
+commit 6ce10ca7b4152a5c2292cb6ecdfde5831180fe16 (HEAD -> master)
+Author: Chennoju Sathvika <chennoju.sathvika@kpit.com>
+Date:   Tue Jun 25 17:47:13 2024 +0530
+
+    code upto tuesday evening
+    
+    
+git add folder or file name/
+
+git status
+
+git commit -m "file or folder name"
+
+
+
+
+
+
+Generating the API key for Git :
+
+kpit@L-18990:~$ ssh-keygen -t rsa -b 4096
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/kpit/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/kpit/.ssh/id_rsa
+Your public key has been saved in /home/kpit/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:hxDe1WZ04o23N4MH2e5RfNFvCPT7dzC/Bd32tX/FMck kpit@L-18990
+The key's randomart image is:
++---[RSA 4096]----+
+|      .   .++ ...|
+|     . o . .=*o.o|
+|      o .  oo+=o*|
+|       . .   .=E*|
+|        S .  .*OO|
+|         .    oOX|
+|               oO|
+|                B|
+|               .o|
++----[SHA256]-----+
+kpit@L-18990:~$ 
+
+
+
+cloning the project from git::
+
+
+
+
+
+
+
+
+
+
+pit@L-18990:~/Downloads/Modern_CPP$ git push origin master --set-upstream
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+kpit@L-18990:~/Downloads/Modern_CPP$ git remote add origin git@github.com:SATHVIKACHENNOJU/Modern_CPP_220303.git
+kpit@L-18990:~/Downloads/Modern_CPP$ git push origin master --set-upstream
+The authenticity of host 'github.com (20.207.73.82)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? 
+
+
+Important git topics:
+->Merging
+->Rebasing
+->Fastforwarding
+to go back to previous verion of code "rollback"
+->cherry pick
+->git stashing
+
+
+kpit@L-18990:~/Downloads$ git clone https://github.com/langroodi/Adaptive-AUTOSAR
+
+

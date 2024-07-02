@@ -1,0 +1,59 @@
+Modern CPP
+    All versions of cpp since C++11
+
+CPP is revised/updated every 3 years
+
+so versions of C++ are:C++11,C++14,C++17..
+
+
+5 Weeks.......
+
+    A->Essentials of Modern CPP(fundamentals)
+    B->Functional programming in Modern CPP
+    C->Concurrency & C++ 17(semaphore,critical section,mutex...)
+    D->STL DS & Alogorithms
+
+
+Fearure 1:in class initialization
+Feature 2:Enum class
+
+Feature 3:Enable/disable special member functions aka 
+            defaulted/deleted member functions
+
+            you can choose whether to enable or disable 6
+            special members for a class you are creationg
+
+            1)Default constructor
+            B)Destructor
+            c)copy constructor
+            D)copy assignment operator = (overload = operator)
+            E)move constructor (new feature in c++ 11)
+            F)move assignment operator =(overload = operator for move)(new feature in moderen c++)
+Fearure 4:Replace null with nullptr
+Fetaure 5:uniform initialization(initilization of local variables in function in {} instead of = (*Not Data Members))
+***Syntatic sugar-nothing new but gives happiness***
+    we can initialize variable in function using {}
+    new syntax for uniform initialization
+
+    NULL : alternate name for 0 
+    Employee* ptr=10;//valid code
+    
+    //do action only on pointer tyoe "null"?
+
+Feature 6:member list initialization
+
+Feature 7:auto keyword
+	detect and infer the type of variables BASED ON INITIAL VALUE
+	Compiler will guess the type of data type (while handling the huge data and you know type of data but it is cumborsome to write again and again so in that case use auto key word
+	then compiler will detect the correct data type and work on it but it is recommended no to use it until it is necessary)
+	
+Feature 8:constructor delegation
+	you can transfer/shift control of the program from one constructor to another IN THE SAME CLASS
+Feature 9:Additional numeric types with specific size in memory(int_32..)	
+Feature 10:For-each (range based for loop)
+Feature 11:Emplace data in containers(in-place construction of values with in the container)
+
+Feature 12: using keyword used to short the length of the data type
+Example:
+Using container=std::vector<Engine*>;
+

@@ -1,0 +1,10 @@
+mkdir {1..5}_JULY
+
+
+
+First Half:Concurency/Parallilism in modern CPP
+
+.......
+
+First Half : CPP Features
+

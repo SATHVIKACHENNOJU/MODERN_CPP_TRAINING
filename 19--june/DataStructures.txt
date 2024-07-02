@@ -1,0 +1,78 @@
+
+
+
+Employee 1 : 28
+Employee 2 : 35
+Employee 3 : 29
+
+Arrangments or Structuring of data:
+
+    A)consecutively,one after the other in memory
+        a)No option for adding data will be providede//array
+
+                [     28     |    35     |    29     ]   
+                    0x100H     0x104H      0x108H
+
+        b)we can add more data values if required, in future//vector
+             
+                [     28     |    35     |    29        36     ]   
+                    0x100H     0x104H      0x108H     0x112
+
+Employee 4 : 36
+
+                [     28     |    35     |    29        36     ]   
+                    0x100H     0x104H      0x108H     0x112//no gaurentee if it is free always
+
+         solution:
+
+                     TRANSFER DATA TO NEW REGION IN MEMORY 
+
+                [     28      |    35     |    29        36     ]   
+                    0x200H     0x204H      0x208H     0x212
+
+                (This migration may slow dowm the performance of the system)
+
+**EVERYTHING IS AN ILLUSION**
+
+THERE IS NO ARRAY ,NO LIST,NOT STACK,NO QUEUEE
+
+0000....0000//10    0x100H
+0000....0000        0x101H
+0000....0000        0x102H
+0000....1010        0x103H
+0000....0000//8
+0000....0000
+0000....0000
+0000....1000
+0000....0000//8     0x109H
+0000....0000        0x1AH
+0000....0000        0x1BH
+0000....0100//4     0x1CH
+
+
+10  0x100H
+
+
+4   0x109H
+
+     NODE 1                          NODE 2
+10  |0x09H.......--------->......4  |nullptr
+
+
+Best Book to learn DS:
+Data structors and algorithms in c++
+    -Adam Drazdek
+
+
+THINGS NOBODY TELLS YOU ABOUT DATA STRUCTURE
+
+    a)Data structors are Arrangements of data,diggerent ways
+     of retrieving or accessing data.
+    b)DS are theoritical and philosophical,they have to be
+     implemented through code.
+    c)Implementations of DS on different platforms or in 
+     different libraries may differ in behaviour.
+    d)Ther are "infinite" data structures in the world.
+    e)Data structors implementations have to follow rule 
+     or syntax of the language.
+    f)
