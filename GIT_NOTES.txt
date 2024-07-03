@@ -298,6 +298,169 @@ to go back to previous verion of code "rollback"
 ->git stashing
 
 
+kpit@L-18990:~/Downloads/Modern_CPP/Week3$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   ../Week2/Lamda_Functions/Aggregation/Project.cpp
+        new file:   ../Week2/Lamda_Functions/example3.cpp
+        new file:   ../Week2/std_bind_2.cpp
+        new file:   ../Week2/std_bind_3.cpp
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    ../.~lock.GIT_NOTES.txt#
+        modified:   ../GIT_NOTES.txt
+        modified:   ../Week2/app
+        modified:   ../Week2/example2.cpp
+        modified:   ../Week2/std_bind_2.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../Week2/.vscode/
+        ../Week2/Lamda_Functions/Aggregation/Employee.cpp
+        ../Week2/Lamda_Functions/Aggregation/Employee.h
+        ../Week2/Lamda_Functions/Aggregation/Functionalities.cpp
+        ../Week2/Lamda_Functions/Aggregation/Functionalities.h
+        ../Week2/Lamda_Functions/Aggregation/Main.cpp
+        ../Week2/Lamda_Functions/Aggregation/Project.h
+        ../Week2/Lamda_Functions/Aggregation/app
+        ../Week2/Lamda_Functions/Aggregation/notes.txt
+        ../Week2/Lamda_Functions/SmartDeviceSample/
+        ../Week2/Lamda_Functions/app
+        ../Week2/Lamda_Functions/example1.cpp
+        ../Week2/Lamda_Functions/example2.cpp
+        ../Week2/Lamda_Functions/example4.cpp
+        ../Week2/Lamda_Functions/notes.txt
+        ../Week2/std_bind.cpp
+        ./
+        ../ls_command.odt
+
+kpit@L-18990:~/Downloads/Modern_CPP/Week3$ cd
+kpit@L-18990:~$ cd /home/kpit/Downloads/Modern_CPP/
+kpit@L-18990:~/Downloads/Modern_CPP$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Week2/Lamda_Functions/Aggregation/Project.cpp
+        new file:   Week2/Lamda_Functions/example3.cpp
+        new file:   Week2/std_bind_2.cpp
+        new file:   Week2/std_bind_3.cpp
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    .~lock.GIT_NOTES.txt#
+        modified:   GIT_NOTES.txt
+        modified:   Week2/app
+        modified:   Week2/example2.cpp
+        modified:   Week2/std_bind_2.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Week2/.vscode/
+        Week2/Lamda_Functions/Aggregation/Employee.cpp
+        Week2/Lamda_Functions/Aggregation/Employee.h
+        Week2/Lamda_Functions/Aggregation/Functionalities.cpp
+        Week2/Lamda_Functions/Aggregation/Functionalities.h
+        Week2/Lamda_Functions/Aggregation/Main.cpp
+        Week2/Lamda_Functions/Aggregation/Project.h
+        Week2/Lamda_Functions/Aggregation/app
+        Week2/Lamda_Functions/Aggregation/notes.txt
+        Week2/Lamda_Functions/SmartDeviceSample/
+        Week2/Lamda_Functions/app
+        Week2/Lamda_Functions/example1.cpp
+        Week2/Lamda_Functions/example2.cpp
+        Week2/Lamda_Functions/example4.cpp
+        Week2/Lamda_Functions/notes.txt
+        Week2/std_bind.cpp
+        Week3/
+        ls_command.odt
+
+kpit@L-18990:~/Downloads/Modern_CPP$ git add ./ ../Week2 ../Week3
+fatal: ../Week2: '../Week2' is outside repository
+kpit@L-18990:~/Downloads/Modern_CPP$ git add 
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+kpit@L-18990:~/Downloads/Modern_CPP$ git add ..
+fatal: ..: '..' is outside repository
+kpit@L-18990:~/Downloads/Modern_CPP$ cd Week3
+kpit@L-18990:~/Downloads/Modern_CPP/Week3$ git add ..
+kpit@L-18990:~/Downloads/Modern_CPP/Week3$ git add ./ ../Week2 ../Week3
+kpit@L-18990:~/Downloads/Modern_CPP/Week3$ cd
+kpit@L-18990:~$ cd /home/kpit/Downloads/Modern_CPP/
+kpit@L-18990:~/Downloads/Modern_CPP$ git commit -m july2
+[master 915c7b5] july2
+ 44 files changed, 1599 insertions(+), 3 deletions(-)
+ delete mode 100644 .~lock.GIT_NOTES.txt#
+ create mode 100644 Week2/.vscode/settings.json
+ create mode 100644 Week2/Lamda_Functions/Aggregation/Employee.cpp
+ create mode 100644 Week2/Lamda_Functions/Aggregation/Employee.h
+ create mode 100644 Week2/Lamda_Functions/Aggregation/Functionalities.cpp
+ create mode 100644 Week2/Lamda_Functions/Aggregation/Functionalities.h
+ create mode 100644 Week2/Lamda_Functions/Aggregation/Main.cpp
+ create mode 100644 Week2/Lamda_Functions/Aggregation/Project.cpp
+ create mode 100644 Week2/Lamda_Functions/Aggregation/Project.h
+ create mode 100755 Week2/Lamda_Functions/Aggregation/app
+ create mode 100644 Week2/Lamda_Functions/Aggregation/notes.txt
+ create mode 100644 Week2/Lamda_Functions/SmartDeviceSample/.vscode/settings.json
+ create mode 100644 Week2/Lamda_Functions/SmartDeviceSample/Device.cpp
+ create mode 100644 Week2/Lamda_Functions/SmartDeviceSample/Device.h
+ create mode 100644 Week2/Lamda_Functions/SmartDeviceSample/Functionalities.cpp
+ create mode 100644 Week2/Lamda_Functions/SmartDeviceSample/Functionalities.h
+ create mode 100644 Week2/Lamda_Functions/SmartDeviceSample/Main.cpp
+ create mode 100644 Week2/Lamda_Functions/SmartDeviceSample/SmartDevice.cpp
+ create mode 100644 Week2/Lamda_Functions/SmartDeviceSample/SmartDevice.h
+ create mode 100644 Week2/Lamda_Functions/SmartDeviceSample/Technology.h
+ create mode 100644 Week2/Lamda_Functions/SmartDeviceSample/sample_problem.txt
+ create mode 100755 Week2/Lamda_Functions/app
+ create mode 100644 Week2/Lamda_Functions/example1.cpp
+ create mode 100644 Week2/Lamda_Functions/example2.cpp
+ create mode 100644 Week2/Lamda_Functions/example3.cpp
+ create mode 100644 Week2/Lamda_Functions/example4.cpp
+ create mode 100644 Week2/Lamda_Functions/notes.txt
+ rewrite Week2/app (87%)
+ create mode 100644 Week2/std_bind.cpp
+ create mode 100644 Week2/std_bind_2.cpp
+ create mode 100644 Week2/std_bind_3.cpp
+ create mode 100644 Week3/.vscode/settings.json
+ create mode 100644 Week3/1_JULY/example1.cpp
+ create mode 100644 Week3/1_JULY/notes.txt
+ create mode 100644 Week3/2_JULY/Error.txt
+ create mode 100644 Week3/2_JULY/Example1.cpp
+ create mode 100644 Week3/2_JULY/Example2.cpp
+ create mode 100644 Week3/2_JULY/Example3.cpp
+ create mode 100644 Week3/2_JULY/Example4.cpp
+ create mode 100644 Week3/2_JULY/Script.sh
+ create mode 100644 Week3/2_JULY/output.txt
+ create mode 100644 ls_command.odt
+kpit@L-18990:~/Downloads/Modern_CPP$ 
+kpit@L-18990:~/Downloads/Modern_CPP$ git status
+On branch master
+nothing to commit, working tree clean
+kpit@L-18990:~/Downloads/Modern_CPP$ 
 kpit@L-18990:~/Downloads$ git clone https://github.com/langroodi/Adaptive-AUTOSAR
 
 
+
+kpit@L-18990:~/Downloads/Modern_CPP$ git push origin master --set-upstream
+The authenticity of host 'github.com (20.207.73.82)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,20.207.73.82' (ECDSA) to the list of known hosts.
+Enumerating objects: 111, done.
+Counting objects: 100% (111/111), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (105/105), done.
+Writing objects: 100% (111/111), 171.61 KiB | 8.17 MiB/s, done.
+Total 111 (delta 13), reused 0 (delta 0)
+remote: Resolving deltas: 100% (13/13), done.
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/SATHVIKACHENNOJU/Modern_CPP_220303/pull/new/master
+remote: 
+To github.com:SATHVIKACHENNOJU/Modern_CPP_220303.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+kpit@L-18990:~/Downloads/Modern_CPP$ 
