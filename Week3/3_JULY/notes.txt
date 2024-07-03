@@ -1,0 +1,10 @@
+variant
+if initilization
+structured_binding
+
+
+concurency:
+    -std::thread
+    -join
+    -mutex
+    -OOP based design & signification

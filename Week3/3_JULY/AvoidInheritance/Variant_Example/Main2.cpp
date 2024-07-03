@@ -40,8 +40,6 @@ void Display(const VrType& v){
 
 }
 
-
-
 int main(){
     VrType v;
 
