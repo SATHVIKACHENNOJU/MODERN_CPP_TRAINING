@@ -461,6 +461,240 @@ remote: Create a pull request for 'master' on GitHub by visiting:
 remote:      https://github.com/SATHVIKACHENNOJU/Modern_CPP_220303/pull/new/master
 remote: 
 To github.com:SATHVIKACHENNOJU/Modern_CPP_220303.git
+
+
+
+
+
+
+kpit@L-18990:~$ cd /home/kpit/Downloads/M
+MARATHON/        MINI_MARATHON_2/ Modern_CPP/      
+kpit@L-18990:~$ cd /home/kpit/Downloads/M
+MARATHON/        MINI_MARATHON_2/ Modern_CPP/      
+kpit@L-18990:~$ cd /home/kpit/Downloads/Modern_CPP/
+kpit@L-18990:~/Downloads/Modern_CPP$ cd /Week3/3_JULY/
+bash: cd: /Week3/3_JULY/: No such file or directory
+kpit@L-18990:~/Downloads/Modern_CPP$ cd /Week_3/3_JULY/
+bash: cd: /Week_3/3_JULY/: No such file or directory
+kpit@L-18990:~/Downloads/Modern_CPP$ git commit -m "3rd july end of the day"
+[feature_addition cbee71e] 3rd july end of the day
+ 12 files changed, 517 insertions(+), 40 deletions(-)
+ create mode 100644 Week3/1_JULY/example2.cpp
+ create mode 100644 Week3/3_JULY/.vscode/settings.json
+ create mode 100644 Week3/3_JULY/AvoidInheritance/Variant_Example/BusinessOwner.h
+ create mode 100644 Week3/3_JULY/AvoidInheritance/Variant_Example/Employee.h
+ create mode 100644 Week3/3_JULY/AvoidInheritance/Variant_Example/Main1.cpp
+ create mode 100644 Week3/3_JULY/AvoidInheritance/Variant_Example/Main2.cpp
+ create mode 100755 Week3/3_JULY/AvoidInheritance/Variant_Example/app
+ create mode 100644 Week3/3_JULY/AvoidInheritance/Variant_ex1.cpp
+ create mode 100755 Week3/3_JULY/AvoidInheritance/app
+ create mode 100644 Week3/3_JULY/example1.cpp
+kpit@L-18990:~/Downloads/Modern_CPP$ git add ../
+fatal: ../: '../' is outside repository
+kpit@L-18990:~/Downloads/Modern_CPP$ git log
+commit cbee71e19aef36de37e53fac0cb807489127f8e4 (HEAD -> feature_addition)
+Author: Chennoju Sathvika <chennoju.sathvika@kpit.com>
+Date:   Wed Jul 3 16:28:31 2024 +0530
+
+    3rd july end of the day
+
+commit 24720ccb87d313094bd51da8257a2c277fdde528 (origin/master, master)
+Author: Chennoju Sathvika <chennoju.sathvika@kpit.com>
+Date:   Tue Jul 2 17:37:34 2024 +0530
+
+    my new feature is ready
+
+commit 817383f9917b807588a55eb45868555e1527c2d9
+Author: Chennoju Sathvika <chennoju.sathvika@kpit.com>
+Date:   Tue Jul 2 16:58:16 2024 +0530
+
+    2nd july code
+kpit@L-18990:~/Downloads/Modern_CPP$ git rebase feature_addition
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+kpit@L-18990:~/Downloads/Modern_CPP$ cd Week3
+kpit@L-18990:~/Downloads/Modern_CPP/Week3$ cd 3_JULY/
+kpit@L-18990:~/Downloads/Modern_CPP/Week3/3_JULY$ git rebase feature_addition
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+kpit@L-18990:~/Downloads/Modern_CPP/Week3/3_JULY$ git commit
+On branch feature_addition
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .vscode/settings.json
+	modified:   AvoidInheritance/Variant_Example/Main2.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	Exception_Replacement.cpp
+	If_initializer.cpp
+	app
+	notes.txt
+	structured_binding.cpp
+
+no changes added to commit (use "git add" and/or "git commit -a")
+kpit@L-18990:~/Downloads/Modern_CPP/Week3/3_JULY$ git add ../
+kpit@L-18990:~/Downloads/Modern_CPP/Week3/3_JULY$ git commit
+Aborting commit due to empty commit message.
+kpit@L-18990:~/Downloads/Modern_CPP/Week3/3_JULY$ git rebase feature_addition
+error: cannot rebase: Your index contains uncommitted changes.
+error: Please commit or stash them.
+kpit@L-18990:~/Downloads/Modern_CPP/Week3/3_JULY$ git commit -m "3rd july end of the day"
+[feature_addition 3f88ff1] 3rd july end of the day
+ 7 files changed, 179 insertions(+), 3 deletions(-)
+ create mode 100644 Week3/3_JULY/Exception_Replacement.cpp
+ create mode 100644 Week3/3_JULY/If_initializer.cpp
+ create mode 100755 Week3/3_JULY/app
+ create mode 100644 Week3/3_JULY/notes.txt
+ create mode 100644 Week3/3_JULY/structured_binding.cpp
+kpit@L-18990:~/Downloads/Modern_CPP/Week3/3_JULY$ git rebase feature_addition
+Current branch feature_addition is up to date.
+kpit@L-18990:~/Downloads/Modern_CPP/Week3/3_JULY$ git checkout 
+kpit@L-18990:~/Downloads/Modern_CPP/Week3/3_JULY$ git branch
+* feature_addition
+  master
+kpit@L-18990:~/Downloads/Modern_CPP/Week3/3_JULY$ git rebase feature_addition
+Current branch feature_addition is up to date.
+kpit@L-18990:~/Downloads/Modern_CPP/Week3/3_JULY$ git checkout main
+error: pathspec 'main' did not match any file(s) known to git
+kpit@L-18990:~/Downloads/Modern_CPP/Week3/3_JULY$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+kpit@L-18990:~/Downloads/Modern_CPP/Week3/3_JULY$ git rebase feature_addition
+fatal: Unable to read current working directory: No such file or directory
+kpit@L-18990:~/Downloads/Modern_CPP/Week3/3_JULY$ git rebase feature_addition
+fatal: Unable to read current working directory: No such file or directory
+kpit@L-18990:~/Downloads/Modern_CPP/Week3/3_JULY$ cd ..
+kpit@L-18990:~/Downloads/Modern_CPP/Week3$ cd ..
+kpit@L-18990:~/Downloads/Modern_CPP$ git rebase feature_addition
+First, rewinding head to replay your work on top of it...
+Fast-forwarded master to feature_addition.
+kpit@L-18990:~/Downloads/Modern_CPP$ git checkout master
+Already on 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+kpit@L-18990:~/Downloads/Modern_CPP$ git push origin master --set-upstream
+Enumerating objects: 39, done.
+Counting objects: 100% (39/39), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (32/32), done.
+Writing objects: 100% (34/34), 30.94 KiB | 6.19 MiB/s, done.
+Total 34 (delta 10), reused 0 (delta 0)
+remote: Resolving deltas: 100% (10/10), completed with 3 local objects.
+To github.com:SATHVIKACHENNOJU/MODERN_CPP_TRAINING.git
+   24720cc..3f88ff1  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+kpit@L-18990:~/Downloads/Modern_CPP$ git rebase feature_addition
+Current branch master is up to date.
+kpit@L-18990:~/Downloads/Modern_CPP$ git log
+commit 3f88ff1a327675c461d110e346d2de377471b551 (HEAD -> master, origin/master, feature_addition)
+Author: Chennoju Sathvika <chennoju.sathvika@kpit.com>
+Date:   Wed Jul 3 16:31:55 2024 +0530
+
+    3rd july end of the day
+
+commit cbee71e19aef36de37e53fac0cb807489127f8e4
+Author: Chennoju Sathvika <chennoju.sathvika@kpit.com>
+Date:   Wed Jul 3 16:28:31 2024 +0530
+
+    3rd july end of the day
+
+commit 24720ccb87d313094bd51da8257a2c277fdde528
+Author: Chennoju Sathvika <chennoju.sathvika@kpit.com>
+Date:   Tue Jul 2 17:37:34 2024 +0530
+
+    my new feature is ready
+
+commit 817383f9917b807588a55eb45868555e1527c2d9
+Author: Chennoju Sathvika <chennoju.sathvika@kpit.com>
+Date:   Tue Jul 2 16:58:16 2024 +0530
+
+    2nd july code
+kpit@L-18990:~/Downloads/Modern_CPP$ git checkout feature_addition
+Switched to branch 'feature_addition'
+kpit@L-18990:~/Downloads/Modern_CPP$ git rebase master
+Current branch feature_addition is up to date.
+kpit@L-18990:~/Downloads/Modern_CPP$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+kpit@L-18990:~/Downloads/Modern_CPP$ git rebase feature_addition
+Current branch master is up to date.
+kpit@L-18990:~/Downloads/Modern_CPP$ git push origin master --set-upstream
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+Everything up-to-date
+kpit@L-18990:~/Downloads/Modern_CPP$ git log
+commit 3f88ff1a327675c461d110e346d2de377471b551 (HEAD -> master, origin/master, feature_addition)
+Author: Chennoju Sathvika <chennoju.sathvika@kpit.com>
+Date:   Wed Jul 3 16:31:55 2024 +0530
+
+    3rd july end of the day
+
+commit cbee71e19aef36de37e53fac0cb807489127f8e4
+Author: Chennoju Sathvika <chennoju.sathvika@kpit.com>
+Date:   Wed Jul 3 16:28:31 2024 +0530
+
+    3rd july end of the day
+
+commit 24720ccb87d313094bd51da8257a2c277fdde528
+Author: Chennoju Sathvika <chennoju.sathvika@kpit.com>
+Date:   Tue Jul 2 17:37:34 2024 +0530
+
+    my new feature is ready
+
+commit 817383f9917b807588a55eb45868555e1527c2d9
+Author: Chennoju Sathvika <chennoju.sathvika@kpit.com>
+Date:   Tue Jul 2 16:58:16 2024 +0530
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Command to search fro the files or folders:
+
+kpit@L-18990:~/Downloads/Modern_CPP$ #find utility
+kpit@L-18990:~/Downloads/Modern_CPP$ #powerful search feature
+kpit@L-18990:~/Downloads/Modern_CPP$ #find <path-where-to-search> <options> -exec <action-to-take-on-items-found>
+kpit@L-18990:~/Downloads/Modern_CPP$ #example1
+kpit@L-18990:~/Downloads/Modern_CPP$ find ~/Downloads/ -name "If_initializer.cpp" -type f
+/home/kpit/Downloads/Modern_CPP/Week3/3_JULY/If_initializer.cpp
+kpit@L-18990:~/Downloads/Modern_CPP$ 
+
  * [new branch]      master -> master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 kpit@L-18990:~/Downloads/Modern_CPP$ 
+
+kpit@L-18990:~/Downloads/Modern_CPP$ find ~/Downloads/Modern_CPP/Week3/3_JULY/ -name "*.h" -type f
+/home/kpit/Downloads/Modern_CPP/Week3/3_JULY/AvoidInheritance/Variant_Example/Employee.h
+/home/kpit/Downloads/Modern_CPP/Week3/3_JULY/AvoidInheritance/Variant_Example/BusinessOwner.h
+kpit@L-18990:~/Downloads/Modern_CPP$ 
+
+kpit@L-18990:~/Downloads/Modern_CPP$ wc -l ~/Downloads/Modern_CPP/Week3/3_JULY/If_initializer.cpp 
+40 /home/kpit/Downloads/Modern_CPP/Week3/3_JULY/If_initializer.cpp
+kpit@L-18990:~/Downloads/Modern_CPP$ 
+
+kpit@L-18990:~/Downloads/Modern_CPP$ find ~/Downloads/Modern_CPP/Week3/3_JULY/ -name "*.h" -type f | wc -l
+2
+
+kpit@L-18990:~/Downloads/Modern_CPP$ find ~/Downloads/Modern_CPP/Week3/3_JULY/ -name "*.h" -user "kpit" -type f
+/home/kpit/Downloads/Modern_CPP/Week3/3_JULY/AvoidInheritance/Variant_Example/Employee.h
+/home/kpit/Downloads/Modern_CPP/Week3/3_JULY/AvoidInheritance/Variant_Example/BusinessOwner.h
+kpit@L-18990:~/Downloads/Modern_CPP$ 
+
+
