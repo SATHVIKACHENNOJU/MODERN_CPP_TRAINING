@@ -1,0 +1,12 @@
+1)expected ;
+    a semicolen is missing.Identify the line and look for left of the
+    token and previous lines to fix.
+
+2)undifined Reference to "something"(means an object/variable)
+
+3)No matching function called
+
+
+&&->indicates r value Reference
+
+const bool &flag->accepts both L and R values if l val is passed it takes it as Reference if r val passed it will use it for initilization
